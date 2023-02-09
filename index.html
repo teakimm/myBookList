@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>MyNovelList</title>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <h1>MyNovelList</h1>
+      <button class="create">New Entry</button>
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Add a Book</h2>
+          <form action="javascript:submit()" class="form">
+            <div class="input">
+              <label for="Title">Title</label>
+              <input type="text" class="title-input" name="title" placeholder="Of Mice and Men" required>
+            </div>
+            <div class="input">
+              <label for="Author">Author</label>
+              <input type="text" class="author-input" name="author" placeholder="John Steinbeck" required>
+            </div>
+            <div class="input">
+              <label for="score">Score</label>
+              <input type="number" class="score-input" name="author" placeholder="8" min="1" max="10" required>
+            </div>
+            <div class="input">
+              <label for="status">Status</label>
+              <select name="status" class="status-input" required>
+                <option>Read</option>
+                <option>Paused</option>
+                <option>Rereading</option>
+                <option>Plan to Read</option>
+              </select>
+            </div>
+            <button type="submit">Add</button>
+          </form>
+      </div>
+    </div>
+  </header>
+  <div class="main-page">
+    <aside class="sidebar">
+      <section>
+        <h3>Filter List</h3>
+        <ul class="filter">
+          <li class="all">All</li>
+          <li class="read">Read</li>
+          <li class="paused">Paused</li>
+          <li class="rereading">Rereading</li>
+          <li class="plan">Plan to Read</li>
+        </ul>
+      </section>
+    </aside>
+    <main>
+      <div class="library-head">
+        <div class="title">Title</div>
+        <div class="author">Author</div>
+        <div class="score">Score</div>
+        <div class="status">Status</div>
+      </div>
+      <div class="book-list"></div>
+    </main>
+    <aside></aside>
+  </div>
+</body>
+</html>
